@@ -14,30 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- name: yum-config-manager --add-repo
-  yum_repository:
-    file: "{{ item.file }}"
-    name: "{{ item.name }}"
-    description: "{{ item.description }}"
-    baseurl: "{{ item.baseurl }}"
-    gpgcheck: "{{ item.gpgcheck }}"
-    gpgkey: "{{ item.gpgkey }}"
-    enabled: "{{ item.enabled }}"
-  with_items: "{{ _yum_repository }}"
-  tags: docker
-
 - name: yum install
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
   with_items: "{{ _yum }}"
-  tags: docker
-
-- name: enable service
-  shell: |
-    systemctl --force enable docker
-  args:
-    warn: false
-  register: systemctl_enable_result
-  changed_when: systemctl_enable_result.rc != 0
-  tags: docker
+  tags: kernel

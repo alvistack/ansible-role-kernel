@@ -27,7 +27,7 @@
       skip: "yes"
   loop_control:
     loop_var: "loop_var"
-  tags: docker
+  tags: kernel
 
 - name: include release specific tasks
   include_tasks: "{{ loop_var }}"
@@ -42,12 +42,4 @@
       skip: "yes"
   loop_control:
     loop_var: "loop_var"
-  tags: docker
-
-- name: pip install
-  pip:
-    name: "{{ item.name | default(None) or omit }}"
-    state: "{{ item.state | default(None) or omit }}"
-    version: "{{ item.version | default(None) or omit }}"
-  with_items: "{{ _pip }}"
-  tags: docker
+  tags: kernel
