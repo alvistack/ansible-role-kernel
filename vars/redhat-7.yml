@@ -14,24 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_yum_repository: [
-  {
-    file: "docker-ce",
-    name: "docker-ce-stable",
-    description: "Docker CE Stable - $basearch",
-    baseurl: "https://download.docker.com/linux/centos/7/$basearch/stable",
-    gpgcheck: "yes",
-    gpgkey: "https://download.docker.com/linux/centos/gpg",
-    enabled: "yes",
-  },
+_rpm_key: [
+  { state: "present", key: "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org" },
 ]
 _yum: [
-  { state: "absent", name: "docker" },
-  { state: "absent", name: "docker-common" },
-  { state: "absent", name: "docker-engine" },
-  { state: "latest", name: "docker-ce" },
-]
-_pip: [
-  { state: "absent", name: "docker-py" },
-  { state: "latest", name: "docker" },
+  { state: "latest", name: "https://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm" },
+  { state: "latest", name: "kernel-ml", enablerepo: "elrepo-kernel" },
 ]

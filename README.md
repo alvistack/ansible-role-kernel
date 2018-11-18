@@ -1,11 +1,11 @@
-# Ansible Role for Docker
+# Ansible Role for Kernel
 
-[![Travis](https://img.shields.io/travis/alvistack/ansible-role-docker.svg)](https://travis-ci.org/alvistack/ansible-role-docker)
-[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-docker.svg)](https://github.com/alvistack/ansible-role-docker)
-[![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-docker.svg)](https://github.com/alvistack/ansible-role-docker/blob/master/LICENSE)
-[![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.docker-blue.svg)](https://galaxy.ansible.com/alvistack/docker)
+[![Travis](https://img.shields.io/travis/alvistack/ansible-role-kernel.svg)](https://travis-ci.org/alvistack/ansible-role-kernel)
+[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-kernel.svg)](https://github.com/alvistack/ansible-role-kernel)
+[![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-kernel.svg)](https://github.com/alvistack/ansible-role-kernel/blob/master/LICENSE)
+[![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.kernel-blue.svg)](https://galaxy.ansible.com/alvistack/kernel)
 
-Ansible Role for Docker Installation.
+Ansible Role for Kernel Installation.
 
 ## Requirements
 
