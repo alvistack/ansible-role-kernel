@@ -33,7 +33,6 @@
   remote_user: root
   tasks:
     - name: uname -a
-      shell: |
-        uname -a
+      command: uname -a
       register: uname_result
       changed_when: uname_result.rc != 0
