@@ -6,6 +6,7 @@
 
   - CI with ansible-lint and galaxy-lint-rules
   - Use shell only when shell functionality is required
+  - Replace tests from Docker to LXD
 
 ## 2.0.0 - 2018-11-18
 
