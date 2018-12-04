@@ -34,5 +34,5 @@
   tasks:
     - name: uname -a
       command: uname -a
-      register: uname_result
-      changed_when: uname_result.rc != 0
+      register: result
+      changed_when: result is not succeeded
