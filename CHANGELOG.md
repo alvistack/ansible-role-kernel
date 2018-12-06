@@ -1,13 +1,20 @@
 # Ansible Role for Kernel
 
-## 2.1.0 - TBC
+## 2.2.0 - TBC
 
 ### Major Changes
 
-  - CI with ansible-lint and galaxy-lint-rules
+## 2.1.0 - 2018-12-06
+
+### Major Changes
+
+  - CI with yamllint, ansible-lint and ansible-playbook --syntax-check
+  - CI with LXD, improve systemd support
   - Use shell only when shell functionality is required
-  - Replace tests from Docker to LXD
-  - Assume ELRepo already enabled
+
+### CentOS
+
+  - Don't install elrepo-release, assume yum already handle it
 
 ## 2.0.0 - 2018-11-18
 
