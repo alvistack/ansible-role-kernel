@@ -16,4 +16,5 @@
 
 _yum: [
   { state: "latest", name: "kernel-lt", enablerepo: "elrepo-kernel" },
+  { state: "latest", name: "kernel-lt-devel", enablerepo: "elrepo-kernel" },
 ]
