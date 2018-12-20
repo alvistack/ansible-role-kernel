@@ -15,6 +15,6 @@
 # limitations under the License.
 
 _yum: [
-  { state: "latest", name: "kernel-ml", enablerepo: "elrepo-kernel" },
-  { state: "latest", name: "kernel-ml-devel", enablerepo: "elrepo-kernel" },
+  { state: "latest", name: "kernel-lt", enablerepo: "elrepo-kernel" },
+  { state: "latest", name: "kernel-lt-devel", enablerepo: "elrepo-kernel" },
 ]
