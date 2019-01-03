@@ -14,6 +14,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_rpm_key: [
+  { state: "present", key: "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org" },
+]
+_yum_repository: [
+  { state: "latest", name: "https://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm" },
+]
 _yum: [
   { state: "latest", name: "kernel-lt", enablerepo: "elrepo-kernel" },
   { state: "latest", name: "kernel-lt-devel", enablerepo: "elrepo-kernel" },
