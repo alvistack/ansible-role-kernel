@@ -18,6 +18,7 @@
   rpm_key:
     key: "{{ item.key }}"
     state: "{{ item.state }}"
+    validate_certs: false
   with_items: "{{ _rpm_key }}"
   register: result
   until: result is succeeded
@@ -27,6 +28,7 @@
   yum:
     name: "{{ item.name | default(None) or omit }}"
     state: "{{ item.state | default(None) or omit }}"
+    validate_certs: false
   with_items: "{{ _yum_repository }}"
   register: result
   until: result is succeeded
@@ -39,6 +41,7 @@
     name: "{{ item.name | default(None) or omit }}"
     state: "{{ item.state | default(None) or omit }}"
     enablerepo: "{{ item.enablerepo | default(None) or omit }}"
+    validate_certs: false
   with_items: "{{ _yum }}"
   register: result
   until: result is succeeded
