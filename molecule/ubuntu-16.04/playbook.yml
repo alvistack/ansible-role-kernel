@@ -17,8 +17,7 @@
 - hosts: all
   remote_user: root
   roles:
-    - role: python
-    - role: apt
+    - role: bootstrap
     - role: kernel
 
 - hosts: all
