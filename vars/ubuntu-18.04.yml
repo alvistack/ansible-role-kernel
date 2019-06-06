@@ -15,5 +15,5 @@
 # limitations under the License.
 
 _apt: [
-  { state: "latest", name: "linux-generic" },
+  { state: "latest", name: "linux-generic-hwe-18.04" },
 ]
