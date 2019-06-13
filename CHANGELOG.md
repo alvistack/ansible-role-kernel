@@ -1,11 +1,16 @@
 # Ansible Role for Kernel
 
-## 3.1.0 - TBC
+## 3.2.0 - TBC
+
+### Major Changes
+
+## 3.1.0 - 2019-06-13
 
 ### Major Changes
 
   - Always include default variables from `vars/main.yml`
   - Always use `become: true` with molecule, especially for vagrant
+  - Install `linux-generic-hwe-18.04` for Ubuntu 18.04
 
 ## 3.0.0 - 2019-05-20
 
