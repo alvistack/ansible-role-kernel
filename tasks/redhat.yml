@@ -18,7 +18,7 @@
   rpm_key:
     key: "{{ item.key }}"
     state: "{{ item.state }}"
-  with_items: "{{ _rpm_key }}"
+  loop: "{{ _rpm_key }}"
   register: result
   until: result is succeeded
   tags: kernel
@@ -27,7 +27,7 @@
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  with_items: "{{ _yum_repository }}"
+  loop: "{{ _yum_repository }}"
   register: result
   until: result is succeeded
   changed_when: false
@@ -39,7 +39,7 @@
     name: "{{ item.name }}"
     state: "{{ item.state }}"
     enablerepo: "{{ item.enablerepo | default(None) or omit }}"
-  with_items: "{{ _yum }}"
+  loop: "{{ _yum }}"
   register: result
   until: result is succeeded
   tags: kernel
