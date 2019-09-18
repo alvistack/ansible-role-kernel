@@ -14,7 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_zypper: [
-  { state: "latest", name: "kernel-default" },
-  { state: "latest", name: "kernel-source" },
-]
+_zypper:
+  - { state: "latest", name: "kernel-default" }
+  - { state: "latest", name: "kernel-source" }
