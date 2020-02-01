@@ -14,11 +14,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+- name: zypper install gpg2
+  zypper:
+    name: "gpg2"
+    state: "present"
+  register: result
+  until: result is succeeded
+  tags: kernel
+
+- name: zypper addrepo
+  zypper_repository:
+    name: "{{ item.name }}"
+    repo: "{{ item.repo }}"
+    state: "{{ item.state }}"
+    disable_gpg_check: true
+    auto_import_keys: true
+    autorefresh: true
+  loop: "{{ _zypper_repository[kernel_release] }}"
+  tags: kernel
+
 - name: zypper install
   zypper:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-  loop: "{{ _zypper }}"
+  loop: "{{ _zypper[kernel_release] }}"
   register: result
   until: result is succeeded
   tags: kernel
