@@ -14,6 +14,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_zypper_repository:
+  mainline:
+    - { state: "present", name: "Kernel:standard", repo: "https://download.opensuse.org/repositories/Kernel:/stable/standard" }
+  distribution: []
+
 _zypper:
-  - { state: "latest", name: "kernel-default" }
-  - { state: "latest", name: "kernel-source" }
+  mainline:
+    - { state: "latest", name: "kernel-default" }
+    - { state: "latest", name: "kernel-source" }
+  distribution:
+    - { state: "latest", name: "kernel-default" }
+    - { state: "latest", name: "kernel-source" }
