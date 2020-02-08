@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Migrate molecule tests to Libvirt
   - Support `mainline` and `distribution` kernel
 
 ## 4.1.0 - 2020-01-16
