@@ -16,6 +16,6 @@
 
 _apt:
   mainline:
-    - { state: "latest", name: "linux-generic-hwe-18.04" }
+    - { state: "latest", name: "linux-generic" }
   distribution:
     - { state: "latest", name: "linux-generic" }
