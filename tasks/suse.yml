@@ -43,6 +43,7 @@
   zypper:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
+    force: true
   loop: "{{ _zypper[kernel_release] }}"
   register: result
   until: result is succeeded
