@@ -16,12 +16,15 @@
 
 _rpm_key:
   mainline:
-    - { state: "present", key: "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org" }
+    - key: "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
+      fingerprint: "96C0104F631547311E0BB1AE309BC305BAADAE52"
+      state: "present"
   distribution: []
 
 _yum_repository:
   mainline:
-    - { state: "latest", name: "https://www.elrepo.org/elrepo-release-7.0-4.el7.elrepo.noarch.rpm" }
+    - name: "https://www.elrepo.org/elrepo-release-7.0-4.el7.elrepo.noarch.rpm"
+      state: "latest"
   distribution: []
 
 _yum:
