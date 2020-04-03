@@ -1,6 +1,6 @@
 # Ansible Role for Kernel
 
-[![Travis](https://img.shields.io/travis/alvistack/ansible-role-kernel.svg)](https://travis-ci.org/alvistack/ansible-role-kernel)
+[![Travis](https://img.shields.io/travis/com/alvistack/ansible-role-kernel.svg)](https://travis-ci.com/alvistack/ansible-role-kernel)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-kernel.svg)](https://github.com/alvistack/ansible-role-kernel)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-kernel.svg)](https://github.com/alvistack/ansible-role-kernel/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.kernel-blue.svg)](https://galaxy.ansible.com/alvistack/kernel)
