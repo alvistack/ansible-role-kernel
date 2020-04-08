@@ -23,7 +23,7 @@ _rpm_key:
 
 _rpm_repository:
   mainline:
-    - name: "https://www.elrepo.org/elrepo-release-7.0-4.el7.elrepo.noarch.rpm"
+    - name: "https://www.elrepo.org/elrepo-release-8.1-1.el8.elrepo.noarch.rpm"
       state: "latest"
   distribution: []
 
