@@ -13,17 +13,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-_apt_key:
-  mainline: []
-  distribution: []
-
-_apt_repository:
-  mainline: []
-  distribution: []
-
-_apt:
-  mainline:
-    - { state: "latest", name: "linux-generic-hwe-20.04" }
-  distribution:
-    - { state: "latest", name: "linux-generic" }
