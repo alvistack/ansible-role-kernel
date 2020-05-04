@@ -14,9 +14,37 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+- name: apt-get install gnupg
+  apt:
+    name: "gnupg"
+    state: "present"
+  register: result
+  until: result is succeeded
+  tags: kernel
+
+- name: apt-key add
+  apt_key:
+    url: "{{ item.url }}"
+    id: "{{ item.id }}"
+    state: "{{ item.state }}"
+  loop: "{{ _apt_key[kernel_release] }}"
+  register: result
+  until: result is succeeded
+  tags: kernel
+
+- name: apt-add-repository
+  apt_repository:
+    repo: "{{ item.repo }}"
+    state: "{{ item.state }}"
+  loop: "{{ _apt_repository[kernel_release] }}"
+  register: result
+  until: result is succeeded
+  tags: kernel
+
 - name: apt-get install
   apt:
     name: "{{ item.name }}"
+    default_release: "{{ item.default_release | default(None) or omit }}"
     state: "{{ item.state }}"
   loop: "{{ _apt[kernel_release] }}"
   register: result

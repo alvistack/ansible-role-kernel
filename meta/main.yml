@@ -27,13 +27,16 @@ galaxy_info:
         - focal
         - eoan
         - bionic
+    - name: Debian
+      versions:
+        - buster
     - name: EL
       versions:
         - 8
         - 7
     - name: opensuse
       versions:
-        - all
+        - 15.1
   galaxy_tags:
     - system
 dependencies: []

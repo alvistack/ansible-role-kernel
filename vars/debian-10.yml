@@ -19,11 +19,13 @@ _apt_key:
   distribution: []
 
 _apt_repository:
-  mainline: []
+  mainline:
+    - repo: "deb http://deb.debian.org/debian buster-backports main"
+      state: "present"
   distribution: []
 
 _apt:
   mainline:
-    - { state: "latest", name: "linux-generic-hwe-20.04" }
+    - { state: "latest", name: "linux-image-amd64", default_release: "buster-backports" }
   distribution:
-    - { state: "latest", name: "linux-generic" }
+    - { state: "latest", name: "linux-image-amd64" }
