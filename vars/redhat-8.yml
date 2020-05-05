@@ -21,10 +21,26 @@ _rpm_key:
       state: "present"
   distribution: []
 
-_rpm_repository:
+_yum_repository:
   mainline:
-    - name: "https://www.elrepo.org/elrepo-release-8.1-1.el8.elrepo.noarch.rpm"
-      state: "latest"
+    - file: "elrepo"
+      name: "elrepo"
+      description: "ELRepo.org Community Enterprise Linux Repository - el8"
+      baseurl: "http://elrepo.org/linux/elrepo/el8/x86_64/"
+      enabled: true
+      priority: "2"
+      gpgcheck: true
+      gpgkey: "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
+      state: "present"
+    - file: "elrepo"
+      name: "elrepo-kernel"
+      description: "ELRepo.org Community Enterprise Linux Kernel Repository - el8"
+      baseurl: "http://elrepo.org/linux/kernel/el8/$basearch/"
+      enabled: false
+      priority: "2"
+      gpgcheck: true
+      gpgkey: "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
+      state: "present"
   distribution: []
 
 _yum:

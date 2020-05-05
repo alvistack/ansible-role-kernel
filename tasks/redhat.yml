@@ -33,14 +33,17 @@
   tags: kernel
 
 - name: yum-config-manager --add-repo
-  yum:
+  yum_repository:
+    file: "{{ item.file }}"
     name: "{{ item.name }}"
+    description: "{{ item.description }}"
+    baseurl: "{{ item.baseurl }}"
+    enabled: "{{ item.enabled }}"
+    priority: "{{ item.priority | default(None) or omit }}"
+    gpgcheck: "{{ item.gpgcheck | default(None) or omit }}"
+    gpgkey: "{{ item.gpgkey | default(None) or omit }}"
     state: "{{ item.state }}"
-  loop: "{{ _rpm_repository[kernel_release] }}"
-  register: result
-  until: result is succeeded
-  changed_when: false
-  ignore_errors: true
+  loop: "{{ _yum_repository[kernel_release] }}"
   tags: kernel
 
 - name: yum install
