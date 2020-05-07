@@ -21,26 +21,14 @@ _rpm_key:
       state: "present"
   distribution: []
 
-_yum_repository:
+_rpm_repository:
   mainline:
-    - file: "elrepo"
-      name: "elrepo"
-      description: "ELRepo.org Community Enterprise Linux Repository - el7"
-      baseurl: "http://elrepo.org/linux/elrepo/el7/x86_64/"
-      enabled: true
-      priority: "2"
-      gpgcheck: true
-      gpgkey: "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
-      state: "present"
-    - file: "elrepo"
-      name: "elrepo-kernel"
-      description: "ELRepo.org Community Enterprise Linux Kernel Repository - el7"
-      baseurl: "http://elrepo.org/linux/kernel/el7/$basearch/"
-      enabled: false
-      priority: "2"
-      gpgcheck: true
-      gpgkey: "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
-      state: "present"
+    - name: "https://www.elrepo.org/elrepo-release-7.0-4.el7.elrepo.noarch.rpm"
+      state: "latest"
+  distribution: []
+
+_yum_repository:
+  mainline: []
   distribution: []
 
 _yum:

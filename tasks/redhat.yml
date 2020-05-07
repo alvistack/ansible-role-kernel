@@ -33,6 +33,17 @@
   tags: kernel
 
 - name: yum-config-manager --add-repo
+  yum:
+    name: "{{ item.name }}"
+    state: "{{ item.state }}"
+  loop: "{{ _rpm_repository[kernel_release] }}"
+  register: result
+  until: result is succeeded
+  changed_when: false
+  ignore_errors: true
+  tags: kernel
+
+- name: yum-config-manager --add-repo
   yum_repository:
     file: "{{ item.file }}"
     name: "{{ item.name }}"

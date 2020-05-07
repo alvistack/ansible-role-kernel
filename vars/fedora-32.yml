@@ -21,6 +21,10 @@ _rpm_key:
       state: "present"
   distribution: []
 
+_rpm_repository:
+  mainline: []
+  distribution: []
+
 _yum_repository:
   mainline:
     - file: "kernel-vanilla"
