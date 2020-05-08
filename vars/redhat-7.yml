@@ -27,6 +27,10 @@ _rpm_repository:
       state: "latest"
   distribution: []
 
+_yum_repository:
+  mainline: []
+  distribution: []
+
 _yum:
   mainline:
     - { state: "latest", name: "kernel-ml", enablerepo: "elrepo-kernel" }

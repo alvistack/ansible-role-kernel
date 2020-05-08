@@ -43,6 +43,20 @@
   ignore_errors: true
   tags: kernel
 
+- name: yum-config-manager --add-repo
+  yum_repository:
+    file: "{{ item.file }}"
+    name: "{{ item.name }}"
+    description: "{{ item.description }}"
+    baseurl: "{{ item.baseurl }}"
+    enabled: "{{ item.enabled }}"
+    priority: "{{ item.priority | default(None) or omit }}"
+    gpgcheck: "{{ item.gpgcheck | default(None) or omit }}"
+    gpgkey: "{{ item.gpgkey | default(None) or omit }}"
+    state: "{{ item.state }}"
+  loop: "{{ _yum_repository[kernel_release] }}"
+  tags: kernel
+
 - name: yum install
   yum:
     name: "{{ item.name }}"
