@@ -44,9 +44,16 @@
 - name: apt-get install
   apt:
     name: "{{ item.name }}"
-    default_release: "{{ item.default_release | default(None) or omit }}"
     state: "{{ item.state }}"
   loop: "{{ _apt[kernel_release] }}"
   register: result
   until: result is succeeded
+  tags: kernel
+
+- name: mainline --yes --install-latest
+  command: mainline --yes --install-latest
+  when: kernel_release == 'mainline'
+  register: result
+  until: result is succeeded
+  changed_when: result is not succeeded
   tags: kernel
