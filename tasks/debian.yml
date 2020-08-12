@@ -55,4 +55,5 @@
   when: kernel_release == 'mainline'
   register: result
   until: result is succeeded
+  changed_when: result is not succeeded
   tags: kernel
