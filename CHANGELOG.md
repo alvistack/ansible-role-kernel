@@ -5,6 +5,7 @@
 ### Major Changes
 
   - Remove Ubuntu 19.10 support
+  - Install Ubuntu Mainline Kernel with `mainline`
 
 ## 4.4.0 - 2020-06-04
 
