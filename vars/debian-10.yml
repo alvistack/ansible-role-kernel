@@ -23,13 +23,16 @@ _apt_key:
 
 _apt_repository:
   mainline:
+    - repo: "deb http://deb.debian.org/debian buster-backports main"
+      state: "present"
     - repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu focal main"
       state: "present"
   distribution: []
 
 _apt:
   mainline:
-    - { state: "latest", name: "policykit-1" }
+    - { state: "latest", name: "linux-image-amd64", default_release: "buster-backports" }
     - { state: "latest", name: "mainline" }
+    - { state: "latest", name: "policykit-1" }
   distribution:
     - { state: "latest", name: "linux-image-amd64" }

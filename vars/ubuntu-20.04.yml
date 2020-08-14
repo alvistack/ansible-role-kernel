@@ -29,7 +29,8 @@ _apt_repository:
 
 _apt:
   mainline:
-    - { state: "latest", name: "policykit-1" }
-    - { state: "latest", name: "mainline" }
-  distribution:
     - { state: "latest", name: "linux-generic-hwe-20.04" }
+    - { state: "latest", name: "mainline" }
+    - { state: "latest", name: "policykit-1" }
+  distribution:
+    - { state: "latest", name: "linux-generic" }
