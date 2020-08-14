@@ -15,22 +15,15 @@
 # limitations under the License.
 
 _apt_key:
-  mainline:
-    - url: "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
-      id: "3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
-      state: "present"
+  mainline: []
   distribution: []
 
 _apt_repository:
-  mainline:
-    - repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu bionic main"
-      state: "present"
+  mainline: []
   distribution: []
 
 _apt:
   mainline:
-    - { state: "latest", name: "linux-generic-hwe-18.04" }
-    - { state: "latest", name: "mainline" }
-    - { state: "latest", name: "policykit-1" }
+    - { state: "latest", name: "linux-generic-hwe-18.04-edge" }
   distribution:
-    - { state: "latest", name: "linux-generic" }
+    - { state: "latest", name: "linux-generic-hwe-18.04" }
