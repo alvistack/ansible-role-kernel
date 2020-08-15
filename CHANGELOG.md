@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Install `mainline` for Ubuntu Mainline Kernel
   - Install `linux-oem-20.04` for Ubuntu 20.04
   - Support openSUSE Leap 15.2
   - Remove Ubuntu 19.10 support
