@@ -50,10 +50,10 @@
     description: "{{ item.description }}"
     baseurl: "{{ item.baseurl }}"
     enabled: "{{ item.enabled }}"
+    priority: "{{ item.priority }}"
+    gpgcheck: "{{ item.gpgcheck }}"
+    gpgkey: "{{ item.gpgkey }}"
     state: "{{ item.state }}"
-    priority: "{{ item.priority | default(None) or omit }}"
-    gpgcheck: "{{ item.gpgcheck | default(None) or omit }}"
-    gpgkey: "{{ item.gpgkey | default(None) or omit }}"
   loop: "{{ _yum_repository[kernel_release] }}"
   tags: kernel
 
