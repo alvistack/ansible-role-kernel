@@ -29,8 +29,14 @@ _apt_repository:
 
 _apt:
   mainline:
-    - { state: "latest", name: "linux-generic-hwe-18.04-edge" }
+    - { state: "latest", name: "amd64-microcode" }
+    - { state: "latest", name: "intel-microcode" }
+    - { state: "latest", name: "linux-firmware" }
     - { state: "latest", name: "mainline" }
     - { state: "latest", name: "policykit-1" }
+    - { state: "latest", name: "linux-generic-hwe-18.04-edge" }
   distribution:
+    - { state: "latest", name: "amd64-microcode" }
+    - { state: "latest", name: "intel-microcode" }
+    - { state: "latest", name: "linux-firmware" }
     - { state: "latest", name: "linux-generic-hwe-18.04" }
