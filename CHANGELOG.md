@@ -4,6 +4,9 @@
 
 ### Major Changes
 
+  - Upgrade Travis CI test as Ubuntu Focal based
+  - Upgrade minimal Ansible support to 2.10.0
+  - Install `mainline` for Ubuntu Mainline Kernel
   - Install `linux-oem-20.04` for Ubuntu 20.04
   - Support openSUSE Leap 15.2
   - Remove Ubuntu 19.10 support

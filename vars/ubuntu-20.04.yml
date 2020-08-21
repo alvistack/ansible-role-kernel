@@ -15,15 +15,28 @@
 # limitations under the License.
 
 _apt_key:
-  mainline: []
+  mainline:
+    - url: "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
+      id: "3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
+      state: "present"
   distribution: []
 
 _apt_repository:
-  mainline: []
+  mainline:
+    - repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu focal main"
+      state: "present"
   distribution: []
 
 _apt:
   mainline:
+    - { state: "latest", name: "amd64-microcode" }
+    - { state: "latest", name: "intel-microcode" }
+    - { state: "latest", name: "linux-firmware" }
+    - { state: "latest", name: "mainline" }
+    - { state: "latest", name: "policykit-1" }
     - { state: "latest", name: "linux-oem-20.04" }
   distribution:
+    - { state: "latest", name: "amd64-microcode" }
+    - { state: "latest", name: "intel-microcode" }
+    - { state: "latest", name: "linux-firmware" }
     - { state: "latest", name: "linux-generic-hwe-20.04" }
