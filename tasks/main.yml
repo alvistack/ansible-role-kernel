@@ -47,3 +47,13 @@
         - "."
   ignore_errors: true
   tags: kernel
+
+- name: update-grub
+  command: update-grub
+  changed_when: result is not succeeded
+  tags: kernel
+
+- name: update-initramfs -c -k all
+  command: update-initramfs -c -k all
+  changed_when: result is not succeeded
+  tags: kernel
