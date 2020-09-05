@@ -15,17 +15,18 @@
 # limitations under the License.
 
 _rpm_key:
+  distribution: []
   mainline:
     - key: "https://repos.fedorapeople.org/repos/thl/RPM-GPG-KEY-knurd-kernel-vanilla"
       fingerprint: "7C71B4C9BF717876635F32054534BEED863625FA"
       state: "present"
-  distribution: []
 
 _rpm_repository:
-  mainline: []
   distribution: []
+  mainline: []
 
 _yum_repository:
+  distribution: []
   mainline:
     - file: "kernel-vanilla"
       name: "kernel-vanilla-stable"
@@ -36,12 +37,13 @@ _yum_repository:
       gpgcheck: true
       gpgkey: "https://repos.fedorapeople.org/repos/thl/RPM-GPG-KEY-knurd-kernel-vanilla"
       state: "present"
-  distribution: []
 
 _yum:
-  mainline:
-    - { state: "latest", name: "kernel", enablerepo: "kernel-vanilla-stable" }
-    - { state: "latest", name: "kernel-devel", enablerepo: "kernel-vanilla-stable" }
   distribution:
+    - { state: "latest", name: "tlp" }
     - { state: "latest", name: "kernel" }
     - { state: "latest", name: "kernel-devel" }
+  mainline:
+    - { state: "latest", name: "tlp" }
+    - { state: "latest", name: "kernel", enablerepo: "kernel-vanilla-stable" }
+    - { state: "latest", name: "kernel-devel", enablerepo: "kernel-vanilla-stable" }

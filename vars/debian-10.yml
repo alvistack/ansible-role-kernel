@@ -15,17 +15,19 @@
 # limitations under the License.
 
 _apt_key:
-  mainline: []
   distribution: []
+  mainline: []
 
 _apt_repository:
+  distribution: []
   mainline:
     - repo: "deb http://deb.debian.org/debian buster-backports main"
       state: "present"
-  distribution: []
 
 _apt:
-  mainline:
-    - { state: "latest", name: "linux-image-amd64", default_release: "buster-backports" }
   distribution:
+    - { state: "latest", name: "tlp" }
     - { state: "latest", name: "linux-image-amd64" }
+  mainline:
+    - { state: "latest", name: "tlp" }
+    - { state: "latest", name: "linux-image-amd64", default_release: "buster-backports" }

@@ -15,26 +15,28 @@
 # limitations under the License.
 
 _rpm_key:
+  distribution: []
   mainline:
     - key: "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
       fingerprint: "96C0104F631547311E0BB1AE309BC305BAADAE52"
       state: "present"
-  distribution: []
 
 _rpm_repository:
+  distribution: []
   mainline:
     - name: "https://www.elrepo.org/elrepo-release-7.0-4.el7.elrepo.noarch.rpm"
       state: "latest"
-  distribution: []
 
 _yum_repository:
-  mainline: []
   distribution: []
+  mainline: []
 
 _yum:
-  mainline:
-    - { state: "latest", name: "kernel-ml", enablerepo: "elrepo-kernel" }
-    - { state: "latest", name: "kernel-ml-devel", enablerepo: "elrepo-kernel" }
   distribution:
+    - { state: "latest", name: "tlp" }
     - { state: "latest", name: "kernel" }
     - { state: "latest", name: "kernel-devel" }
+  mainline:
+    - { state: "latest", name: "tlp" }
+    - { state: "latest", name: "kernel-ml", enablerepo: "elrepo-kernel" }
+    - { state: "latest", name: "kernel-ml-devel", enablerepo: "elrepo-kernel" }
