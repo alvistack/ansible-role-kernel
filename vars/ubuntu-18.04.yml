@@ -35,10 +35,10 @@ _apt:
     - { state: "latest", name: "mainline" }
     - { state: "latest", name: "policykit-1" }
     - { state: "latest", name: "thermald" }
-    - { state: "latest", name: "linux-generic-hwe-18.04-edge" }
+    - { state: "latest", name: "linux-generic-hwe-18.04" }
   distribution:
     - { state: "latest", name: "amd64-microcode" }
     - { state: "latest", name: "intel-microcode" }
     - { state: "latest", name: "linux-firmware" }
     - { state: "latest", name: "thermald" }
-    - { state: "latest", name: "linux-generic-hwe-18.04" }
+    - { state: "latest", name: "linux-generic" }
