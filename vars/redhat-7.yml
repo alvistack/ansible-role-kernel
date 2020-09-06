@@ -24,7 +24,7 @@ _rpm_key:
 _rpm_repository:
   distribution: []
   mainline:
-    - name: "https://www.elrepo.org/elrepo-release-7.0-4.el7.elrepo.noarch.rpm"
+    - name: "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
       state: "latest"
 
 _yum_repository:

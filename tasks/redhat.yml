@@ -36,7 +36,6 @@
   yum:
     name: "{{ item.name }}"
     state: "{{ item.state }}"
-    disable_gpg_check: true
   loop: "{{ _rpm_repository[kernel_release] }}"
   register: result
   until: result is succeeded
