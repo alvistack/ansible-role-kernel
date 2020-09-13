@@ -13,3 +13,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+- name: kernel | update-grub
+  command: update-grub
+  changed_when: false
+  ignore_errors: true
+
+- name: kernel | update-initramfs -c -k all
+  command: update-initramfs -c -k all
+  changed_when: false
+  ignore_errors: true

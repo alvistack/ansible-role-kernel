@@ -50,4 +50,7 @@
   loop: "{{ _apt[kernel_release] }}"
   register: result
   until: result is succeeded
+  notify:
+    - kernel | update-grub
+    - kernel | update-initramfs -c -k all
   tags: kernel

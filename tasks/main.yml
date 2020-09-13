@@ -47,3 +47,7 @@
         - "."
   ignore_errors: true
   tags: kernel
+
+- name: flush handlers
+  meta: flush_handlers
+  tags: kernel
