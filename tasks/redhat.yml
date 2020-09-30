@@ -20,7 +20,6 @@
     state: "present"
   register: result
   until: result is succeeded
-  tags: kernel
 
 - name: rpm --import
   rpm_key:
@@ -30,7 +29,6 @@
   loop: "{{ _rpm_key[kernel_release] }}"
   register: result
   until: result is succeeded
-  tags: kernel
 
 - name: yum-config-manager --add-repo
   yum:
@@ -41,7 +39,6 @@
   until: result is succeeded
   changed_when: false
   ignore_errors: true
-  tags: kernel
 
 - name: yum-config-manager --add-repo
   yum_repository:
@@ -55,7 +52,6 @@
     gpgkey: "{{ item.gpgkey }}"
     state: "{{ item.state }}"
   loop: "{{ _yum_repository[kernel_release] }}"
-  tags: kernel
 
 - name: yum install
   yum:
@@ -68,4 +64,3 @@
   notify:
     - kernel | update-grub
     - kernel | update-initramfs -c -k all
-  tags: kernel
