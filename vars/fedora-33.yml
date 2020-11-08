@@ -18,7 +18,7 @@ _rpm_key:
   distribution: []
   mainline:
     - key: "https://repos.fedorapeople.org/repos/thl/RPM-GPG-KEY-knurd-kernel-vanilla"
-      fingerprint: "7C71B4C9BF717876635F32054534BEED863625FA"
+      fingerprint: "7C71B4C9BF717876635F33054534BEED863625FA"
       state: "present"
 
 _rpm_repository:
@@ -31,7 +31,7 @@ _yum_repository:
     - file: "kernel-vanilla"
       name: "kernel-vanilla-stable"
       description: "Linux vanilla kernels from stable series"
-      baseurl: "http://repos.fedorapeople.org/repos/thl/kernel-vanilla-stable/fedora-32/x86_64/"
+      baseurl: "http://repos.fedorapeople.org/repos/thl/kernel-vanilla-stable/fedora-33/x86_64/"
       enabled: false
       priority: "2"
       gpgcheck: true
