@@ -31,7 +31,7 @@ _yum_repository:
     - file: "kernel-vanilla"
       name: "kernel-vanilla-stable"
       description: "Linux vanilla kernels from stable series"
-      baseurl: "http://repos.fedorapeople.org/repos/thl/kernel-vanilla-stable/fedora-32/x86_64/"
+      baseurl: "http://repos.fedorapeople.org/repos/thl/kernel-vanilla-stable/fedora-33/x86_64/"
       enabled: false
       priority: "2"
       gpgcheck: true
