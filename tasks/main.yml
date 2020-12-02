@@ -48,9 +48,11 @@
 - name: flush handlers
   meta: flush_handlers
 
-- name: chmod a+r /boot/vmlinuz*
+- name: chmod 0644 /boot/vmlinuz*
   file:
     dest: "{{ item }}"
     mode: "0644"
   loop:
     "{{ lookup('fileglob', '/boot/vmlinuz*', wantlist=true) }}"
+  changed_when: false
+  ignore_errors: true
