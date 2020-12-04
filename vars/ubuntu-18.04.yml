@@ -15,14 +15,19 @@
 # limitations under the License.
 
 _apt_key:
-  distribution: []
+  distribution:
+    - url: "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
+      id: "3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
+      state: "present"
   mainline:
     - url: "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
       id: "3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
       state: "present"
 
 _apt_repository:
-  distribution: []
+  distribution:
+    - repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu bionic main"
+      state: "present"
   mainline:
     - repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu bionic main"
       state: "present"
@@ -32,6 +37,8 @@ _apt:
     - { state: "latest", name: "amd64-microcode" }
     - { state: "latest", name: "intel-microcode" }
     - { state: "latest", name: "linux-firmware" }
+    - { state: "latest", name: "mainline" }
+    - { state: "latest", name: "policykit-1" }
     - { state: "latest", name: "thermald" }
     - { state: "latest", name: "tlp" }
     - { state: "latest", name: "linux-generic" }
