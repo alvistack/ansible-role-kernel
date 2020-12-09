@@ -50,7 +50,7 @@
 
 - name: chmod 0644 /boot/vmlinuz*
   shell: |
-    set -o pipefail
+    set -euo pipefail
     chmod 0644 /boot/vmlinuz*
   changed_when: false
   ignore_errors: true
