@@ -47,12 +47,3 @@
 
 - name: flush handlers
   meta: flush_handlers
-
-- name: chmod 0644 /boot/vmlinuz*
-  shell: |
-    set -euo pipefail
-    chmod 0644 /boot/vmlinuz*
-  args:
-    executable: "/bin/bash"
-  changed_when: false
-  ignore_errors: true
