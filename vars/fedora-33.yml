@@ -21,7 +21,7 @@ _rpm_key:
       fingerprint: "7C71B4C9BF717876635F32054534BEED863625FA"
       state: "present"
 
-_rpm_repository:
+_rpm_download:
   distribution: []
   mainline: []
 
