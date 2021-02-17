@@ -18,7 +18,7 @@ _zypper_repository:
   distribution: []
   mainline:
     - name: "Kernel:standard"
-      repo: "https://download.opensuse.org/repositories/Kernel:/stable/standard"
+      repo: "http://download.opensuse.org/repositories/Kernel:/stable/standard"
       state: "present"
 
 _zypper:

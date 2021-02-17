@@ -17,20 +17,20 @@
 _rpm_key:
   distribution: []
   mainline:
-    - key: "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7"
+    - key: "http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7"
       fingerprint: "91E97D7C4A5E96F17F3E888F6A2FAEA2352C64E5"
       state: "present"
-    - key: "https://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
+    - key: "http://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
       fingerprint: "96C0104F631547311E0BB1AE309BC305BAADAE52"
       state: "present"
 
 _rpm_download:
   distribution: []
   mainline:
-    - url: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
+    - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
       dest: "/var/cache/ansible/46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed/epel-release-latest-7.noarch.rpm"
       checksum: "sha256:46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed"
-    - url: "https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
+    - url: "http://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
       dest: "/var/cache/ansible/d89507192d898138a1faec87d3db717e993e625c95a7afff70b6fb1e096126ca/elrepo-release-7.el7.elrepo.noarch.rpm"
       checksum: "sha256:d89507192d898138a1faec87d3db717e993e625c95a7afff70b6fb1e096126ca"
 

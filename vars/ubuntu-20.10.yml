@@ -16,11 +16,11 @@
 
 _apt_key:
   distribution:
-    - url: "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
+    - url: "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
       id: "3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
       state: "present"
   mainline:
-    - url: "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
+    - url: "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
       id: "3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
       state: "present"
 
