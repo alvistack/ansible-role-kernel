@@ -17,7 +17,7 @@
 _rpm_key:
   distribution: []
   mainline:
-    - key: "https://repos.fedorapeople.org/repos/thl/RPM-GPG-KEY-knurd-kernel-vanilla"
+    - key: "http://repos.fedorapeople.org/repos/thl/RPM-GPG-KEY-knurd-kernel-vanilla"
       fingerprint: "7C71B4C9BF717876635F32054534BEED863625FA"
       state: "present"
 
@@ -35,7 +35,7 @@ _yum_repository:
       enabled: false
       priority: "2"
       gpgcheck: true
-      gpgkey: "https://repos.fedorapeople.org/repos/thl/RPM-GPG-KEY-knurd-kernel-vanilla"
+      gpgkey: "http://repos.fedorapeople.org/repos/thl/RPM-GPG-KEY-knurd-kernel-vanilla"
       state: "present"
 
 _yum:
