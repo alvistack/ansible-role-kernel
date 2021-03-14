@@ -14,19 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-- name: kernel | redhat | download archive
-  vars:
-    ansible_python_interpreter: "python3"
-  get_url:
-    url: "{{ item.url }}"
-    dest: "{{ item.dest }}"
-    checksum: "{{ item.checksum }}"
-    mode: "{{ item.mode | default('0644') }}"
-    timeout: 300
-  loop: "{{ _rpm_download[kernel_release] }}"
-  register: result
-  until: result is succeeded
-
 - name: kernel | update-grub
   command: update-grub
   changed_when: false
@@ -34,5 +21,15 @@
 
 - name: kernel | update-initramfs -c -k all
   command: update-initramfs -c -k all
+  changed_when: false
+  ignore_errors: true
+
+- name: kernel | grub2-mkconfig -o /boot/grub2/grub
+  command: grub2-mkconfig -o /boot/grub2/grub
+  changed_when: false
+  ignore_errors: true
+
+- name: kernel | dracut -f
+  command: dracut -f
   changed_when: false
   ignore_errors: true

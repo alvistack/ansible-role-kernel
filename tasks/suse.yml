@@ -39,5 +39,5 @@
   register: result
   until: result is succeeded
   notify:
-    - kernel | update-grub
-    - kernel | update-initramfs -c -k all
+    - kernel | grub2-mkconfig -o /boot/grub2/grub
+    - kernel | dracut -f
