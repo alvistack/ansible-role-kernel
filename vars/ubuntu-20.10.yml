@@ -26,10 +26,10 @@ _apt_key:
 
 _apt_repository:
   distribution:
-    - repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu focal main"
+    - repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu groovy main"
       state: "present"
   mainline:
-    - repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu focal main"
+    - repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu groovy main"
       state: "present"
 
 _apt:
