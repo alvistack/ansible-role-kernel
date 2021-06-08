@@ -30,4 +30,4 @@ _apt:
     - { state: "latest", name: "linux-image-amd64" }
   mainline:
     - { state: "latest", name: "tlp" }
-    - { state: "latest", name: "linux-image-amd64", default_release: "bullseye-backports" }
+    - { state: "latest", name: "linux-image-amd64" }
