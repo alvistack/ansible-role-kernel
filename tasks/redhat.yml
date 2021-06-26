@@ -78,7 +78,7 @@
   register: result
   until: result is succeeded
   notify:
-    - kernel | grub2-mkconfig -o /boot/grub2/grub
+    - kernel | grub2-mkconfig -o /boot/grub2/grub.cfg
     - kernel | dracut -f
 
 - name: update /etc/default/grub
@@ -93,5 +93,5 @@
   loop:
     - { option: "GRUB_DEFAULT", value: "0" }
   notify:
-    - kernel | grub2-mkconfig -o /boot/grub2/grub
+    - kernel | grub2-mkconfig -o /boot/grub2/grub.cfg
     - kernel | dracut -f
