@@ -24,8 +24,8 @@
   changed_when: false
   failed_when: false
 
-- name: kernel | grub2-mkconfig -o /boot/grub2/grub
-  command: grub2-mkconfig -o /boot/grub2/grub
+- name: kernel | grub2-mkconfig -o /boot/grub2/grub.cfg
+  command: grub2-mkconfig -o /boot/grub2/grub.cfg
   changed_when: false
   failed_when: false
 

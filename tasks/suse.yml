@@ -39,5 +39,20 @@
   register: result
   until: result is succeeded
   notify:
-    - kernel | grub2-mkconfig -o /boot/grub2/grub
+    - kernel | grub2-mkconfig -o /boot/grub2/grub.cfg
+    - kernel | dracut -f
+
+- name: update /etc/default/grub
+  ini_file:
+    path: "/etc/default/grub"
+    section: ""
+    option: "{{ item.option }}"
+    value: "\"{{ item.value }}\""
+    mode: "0644"
+    no_extra_spaces: true
+    state: "present"
+  loop:
+    - { option: "GRUB_DEFAULT", value: "0" }
+  notify:
+    - kernel | grub2-mkconfig -o /boot/grub2/grub.cfg
     - kernel | dracut -f

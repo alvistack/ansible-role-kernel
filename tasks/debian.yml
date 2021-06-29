@@ -43,3 +43,18 @@
   notify:
     - kernel | update-grub
     - kernel | update-initramfs -c -k all
+
+- name: update /etc/default/grub
+  ini_file:
+    path: "/etc/default/grub"
+    section: ""
+    option: "{{ item.option }}"
+    value: "\"{{ item.value }}\""
+    mode: "0644"
+    no_extra_spaces: true
+    state: "present"
+  loop:
+    - { option: "GRUB_DEFAULT", value: "0" }
+  notify:
+    - kernel | update-grub
+    - kernel | update-initramfs -c -k all
