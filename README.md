@@ -1,9 +1,13 @@
 # Ansible Role for Kernel
 
-[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-kernel/master)](https://gitlab.com/alvistack/ansible-role-kernel/-/pipelines)
-[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-kernel.svg)](https://github.com/alvistack/ansible-role-kernel/releases)
-[![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-kernel.svg)](https://github.com/alvistack/ansible-role-kernel/blob/master/LICENSE)
-[![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.kernel-blue.svg)](https://galaxy.ansible.com/alvistack/kernel)
+[![Gitlab pipeline
+status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-kernel/master)](https://gitlab.com/alvistack/ansible-role-kernel/-/pipelines)
+[![GitHub
+release](https://img.shields.io/github/release/alvistack/ansible-role-kernel.svg)](https://github.com/alvistack/ansible-role-kernel/releases)
+[![GitHub
+license](https://img.shields.io/github/license/alvistack/ansible-role-kernel.svg)](https://github.com/alvistack/ansible-role-kernel/blob/master/LICENSE)
+[![Ansible
+Role](https://img.shields.io/badge/galaxy-alvistack.kernel-blue.svg)](https://galaxy.ansible.com/alvistack/kernel)
 
 Ansible Role for Kernel Installation.
 
@@ -39,7 +43,8 @@ This role could simply deploy to `localhost` as below:
 ## License
 
   - Code released under [Apache License 2.0](LICENSE)
-  - Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+  - Docs released under [CC
+    BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
 ## Author Information
 
