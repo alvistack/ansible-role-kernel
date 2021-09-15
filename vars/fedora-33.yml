@@ -34,6 +34,7 @@ _yum_repository:
       baseurl: "http://repos.fedorapeople.org/repos/thl/kernel-vanilla-stable/fedora-33/x86_64"
       enabled: false
       priority: "2"
+    module_hotfixes: true
       gpgcheck: true
       gpgkey: "http://repos.fedorapeople.org/repos/thl/RPM-GPG-KEY-knurd-kernel-vanilla"
       state: "present"
