@@ -14,11 +14,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_zypper_repository:
+_rpm_key:
   distribution: []
   mainline:
-    - name: "Kernel:standard"
-      repo: "http://download.opensuse.org/repositories/Kernel:/openSUSE-15.2/standard"
+    - key: "http://download.opensuse.org/repositories/Kernel:/openSUSE-15.2/standard/repodata/repomd.xml.key"
+      fingerprint: "4529410AB52F94C403BAB484ECEEF21003579C1D"
+      state: "present"
+
+_yum_repository:
+  distribution: []
+  mainline:
+    - file: "Kernel_openSUSE-15.2"
+      name: "Kernel_openSUSE-15.2"
+      description: "Kernel builds for branch openSUSE-15.2 (standard)"
+      baseurl: "http://download.opensuse.org/repositories/Kernel:/openSUSE-15.2/standard"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://download.opensuse.org/repositories/Kernel:/openSUSE-15.2/standard/repodata/repomd.xml.key"
       state: "present"
 
 _zypper:

@@ -21,7 +21,8 @@ _apt_key:
 _apt_repository:
   distribution: []
   mainline:
-    - repo: "deb http://deb.debian.org/debian buster-backports main"
+    - filename: "buster-backports"
+      repo: "deb http://deb.debian.org/debian buster-backports main"
       state: "present"
 
 _apt:

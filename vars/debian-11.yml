@@ -21,7 +21,8 @@ _apt_key:
 _apt_repository:
   distribution: []
   mainline:
-    - repo: "deb http://deb.debian.org/debian bullseye-backports main"
+    - filename: "bullseye-backports"
+      repo: "deb http://deb.debian.org/debian bullseye-backports main"
       state: "present"
 
 _apt:
