@@ -1,5 +1,7 @@
 # Ansible Role for Kernel
 
+<img src="/alvistack.svg" width="75" alt="AlviStack">
+
 [![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-kernel/master)](https://gitlab.com/alvistack/ansible-role-kernel/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-kernel.svg)](https://github.com/alvistack/ansible-role-kernel/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-kernel.svg)](https://github.com/alvistack/ansible-role-kernel/blob/master/LICENSE)
