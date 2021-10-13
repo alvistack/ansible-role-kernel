@@ -29,11 +29,11 @@ _apt_key:
 _apt_repository:
   distribution:
     - filename: "cappelikan"
-      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu hirsute main"
+      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu impish main"
       state: "present"
   mainline:
     - filename: "cappelikan"
-      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu hirsute main"
+      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu impish main"
       state: "present"
 
 _apt:
