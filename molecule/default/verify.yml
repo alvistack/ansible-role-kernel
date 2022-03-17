@@ -19,6 +19,6 @@
   become: true
   tasks:
     - name: uname -a
-      command: uname -a
+      ansible.builtin.command: uname -a
       register: result
       changed_when: result is not succeeded
