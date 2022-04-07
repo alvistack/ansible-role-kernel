@@ -1,0 +1,49 @@
+---
+
+# (c) Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+_rpm_key:
+  distribution: []
+  mainline:
+    - key: "http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-9"
+      fingerprint: "FF8AD1344597106ECE813B918A3872BF3228467C"
+      state: "present"
+    - key: "http://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
+      fingerprint: "96C0104F631547311E0BB1AE309BC305BAADAE52"
+      state: "present"
+
+_rpm_download:
+  distribution: []
+  mainline:
+    - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm"
+      dest: "/var/cache/ansible/d3731f75ac51d998c6c4a71871ae7b62fc6f8bbf236ba609e7d303ec8c3d1390/epel-release-latest-9.noarch.rpm"
+      checksum: "d3731f75ac51d998c6c4a71871ae7b62fc6f8bbf236ba609e7d303ec8c3d1390"
+    - url: "http://elrepo.org/linux/elrepo/el9/x86_64/RPMS/elrepo-release-9.0-1.el9.noarch.rpm",
+      dest: "/var/cache/ansible/ee9eb0fe10da585f4152f1b67c55e1d3cd14d823a32c711f2efe3b2c1de59ff1/elrepo-release-9.0-1.el9.noarch.rpm"
+      checksum: "ee9eb0fe10da585f4152f1b67c55e1d3cd14d823a32c711f2efe3b2c1de59ff1"
+
+_yum_repository:
+  distribution: []
+  mainline: []
+
+_yum:
+  distribution:
+    - { state: "latest", name: "tlp" }
+    - { state: "latest", name: "kernel" }
+    - { state: "latest", name: "kernel-devel" }
+  mainline:
+    - { state: "latest", name: "tlp" }
+    - { state: "latest", name: "kernel-ml", enablerepo: "elrepo-kernel" }
+    - { state: "latest", name: "kernel-ml-devel", enablerepo: "elrepo-kernel" }
