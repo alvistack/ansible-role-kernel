@@ -15,13 +15,19 @@
 # limitations under the License.
 
 _rpm_key:
-  distribution: []
+  distribution:
+    - key: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
+      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
+      state: "present"
   mainline:
     - key: "http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-9"
       fingerprint: "FF8AD1344597106ECE813B918A3872BF3228467C"
       state: "present"
     - key: "http://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
       fingerprint: "96C0104F631547311E0BB1AE309BC305BAADAE52"
+      state: "present"
+    - key: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
+      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
 
 _rpm_download:
@@ -35,13 +41,35 @@ _rpm_download:
       checksum: "ee9eb0fe10da585f4152f1b67c55e1d3cd14d823a32c711f2efe3b2c1de59ff1"
 
 _yum_repository:
-  distribution: []
-  mainline: []
+  distribution:
+    - file: "home:alvistack"
+      name: "home_alvistack"
+      description: "home:alvistack (CentOS_9_Stream)"
+      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
+      state: "present"
+  mainline:
+    - file: "home:alvistack"
+      name: "home_alvistack"
+      description: "home:alvistack (CentOS_9_Stream)"
+      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
+      state: "present"
 
 _yum:
   distribution:
+    - { state: "latest", name: "tlp" }
     - { state: "latest", name: "kernel" }
     - { state: "latest", name: "kernel-devel" }
   mainline:
+    - { state: "latest", name: "tlp" }
     - { state: "latest", name: "kernel" }
     - { state: "latest", name: "kernel-devel" }

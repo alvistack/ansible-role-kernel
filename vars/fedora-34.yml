@@ -15,10 +15,16 @@
 # limitations under the License.
 
 _rpm_key:
-  distribution: []
+  distribution:
+    - key: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_34/repodata/repomd.xml.key"
+      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
+      state: "present"
   mainline:
     - key: "http://repos.fedorapeople.org/repos/thl/RPM-GPG-KEY-knurd-kernel-vanilla"
       fingerprint: "7C71B4C9BF717876635F32054534BEED863625FA"
+      state: "present"
+    - key: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_34/repodata/repomd.xml.key"
+      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
 
 _rpm_download:
@@ -26,7 +32,17 @@ _rpm_download:
   mainline: []
 
 _yum_repository:
-  distribution: []
+  distribution:
+    - file: "home:alvistack"
+      name: "home_alvistack"
+      description: "home:alvistack (Fedora_34)"
+      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_34"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_34/repodata/repomd.xml.key"
+      state: "present"
   mainline:
     - file: "kernel-vanilla"
       name: "kernel-vanilla-stable"
@@ -37,6 +53,16 @@ _yum_repository:
       module_hotfixes: true
       gpgcheck: true
       gpgkey: "http://repos.fedorapeople.org/repos/thl/RPM-GPG-KEY-knurd-kernel-vanilla"
+      state: "present"
+    - file: "home:alvistack"
+      name: "home_alvistack"
+      description: "home:alvistack (Fedora_34)"
+      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_34"
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_34/repodata/repomd.xml.key"
       state: "present"
 
 _yum:
