@@ -16,52 +16,52 @@
 
 _rpm_key:
   distribution:
-    - key: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_7/repodata/repomd.xml.key"
+    - key: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
       fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
   mainline:
-    - key: "http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7"
-      fingerprint: "91E97D7C4A5E96F17F3E888F6A2FAEA2352C64E5"
+    - key: "http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-9"
+      fingerprint: "FF8AD1344597106ECE813B918A3872BF3228467C"
       state: "present"
     - key: "http://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
       fingerprint: "96C0104F631547311E0BB1AE309BC305BAADAE52"
       state: "present"
-    - key: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_7/repodata/repomd.xml.key"
+    - key: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
       fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
 
 _rpm_download:
   distribution: []
   mainline:
-    - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
-      dest: "/var/cache/ansible/46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed/epel-release-latest-7.noarch.rpm"
-      checksum: "46fa100dbf4c103e1b33f04128a837028d603939ef5d72026c4ab9dadcd55bed"
-    - url: "http://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm"
-      dest: "/var/cache/ansible/d89507192d898138a1faec87d3db717e993e625c95a7afff70b6fb1e096126ca/elrepo-release-7.el7.elrepo.noarch.rpm"
-      checksum: "d89507192d898138a1faec87d3db717e993e625c95a7afff70b6fb1e096126ca"
+    - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm"
+      dest: "/var/cache/ansible/d3731f75ac51d998c6c4a71871ae7b62fc6f8bbf236ba609e7d303ec8c3d1390/epel-release-latest-9.noarch.rpm"
+      checksum: "d3731f75ac51d998c6c4a71871ae7b62fc6f8bbf236ba609e7d303ec8c3d1390"
+    - url: "http://www.elrepo.org/elrepo-release-9.0-1.el9.elrepo.noarch.rpm"
+      dest: "/var/cache/ansible/ee9eb0fe10da585f4152f1b67c55e1d3cd14d823a32c711f2efe3b2c1de59ff1/elrepo-release-9.0-1.el9.elrepo.noarch.rpm"
+      checksum: "ee9eb0fe10da585f4152f1b67c55e1d3cd14d823a32c711f2efe3b2c1de59ff1"
 
 _yum_repository:
   distribution:
     - file: "home:alvistack"
       name: "home_alvistack"
-      description: "home:alvistack (CentOS_7)"
-      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_7"
+      description: "home:alvistack (CentOS_9_Stream)"
+      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream"
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_7/repodata/repomd.xml.key"
+      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
       state: "present"
   mainline:
     - file: "home:alvistack"
       name: "home_alvistack"
-      description: "home:alvistack (CentOS_7)"
-      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_7"
+      description: "home:alvistack (CentOS_9_Stream)"
+      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream"
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_7/repodata/repomd.xml.key"
+      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
       state: "present"
 
 _yum:
@@ -71,5 +71,5 @@ _yum:
     - { state: "latest", name: "kernel-devel" }
   mainline:
     - { state: "latest", name: "tlp" }
-    - { state: "latest", name: "kernel-ml", enablerepo: "elrepo-kernel" }
-    - { state: "latest", name: "kernel-ml-devel", enablerepo: "elrepo-kernel" }
+    - { state: "latest", name: "kernel" }
+    - { state: "latest", name: "kernel-devel" }

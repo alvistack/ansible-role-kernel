@@ -20,10 +20,18 @@ _apt_key:
       url: "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
       id: "3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
       state: "present"
+    - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
+      url: "http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_22.04/Release.key"
+      id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
+      state: "present"
   mainline:
     - keyring: "/etc/apt/trusted.gpg.d/cappelikan.gpg"
       url: "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
       id: "3AE27527713D2479DCAFFD58A89D7C1B2F76304D"
+      state: "present"
+    - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
+      url: "http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_22.04/Release.key"
+      id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
 
 _apt_repository:
@@ -31,9 +39,15 @@ _apt_repository:
     - filename: "cappelikan"
       repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu impish main"
       state: "present"
+    - filename: "home:alvistack"
+      repo: "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_22.04/ /"
+      state: "present"
   mainline:
     - filename: "cappelikan"
       repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu impish main"
+      state: "present"
+    - filename: "home:alvistack"
+      repo: "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_22.04/ /"
       state: "present"
 
 _apt:
