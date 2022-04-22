@@ -37,14 +37,14 @@ _apt_key:
 _apt_repository:
   distribution:
     - filename: "cappelikan"
-      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu impish main"
+      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu jammy main"
       state: "present"
     - filename: "home:alvistack"
       repo: "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_22.04/ /"
       state: "present"
   mainline:
     - filename: "cappelikan"
-      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu impish main"
+      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu jammy main"
       state: "present"
     - filename: "home:alvistack"
       repo: "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_22.04/ /"
