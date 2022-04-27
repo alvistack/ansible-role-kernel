@@ -37,14 +37,14 @@ _apt_key:
 _apt_repository:
   distribution:
     - filename: "cappelikan"
-      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu impish main"
+      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu jammy main"
       state: "present"
     - filename: "home:alvistack"
       repo: "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_22.04/ /"
       state: "present"
   mainline:
     - filename: "cappelikan"
-      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu impish main"
+      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu jammy main"
       state: "present"
     - filename: "home:alvistack"
       repo: "deb http://download.opensuse.org/repositories/home:/alvistack/xUbuntu_22.04/ /"
@@ -68,4 +68,4 @@ _apt:
     - { state: "latest", name: "policykit-1" }
     - { state: "latest", name: "thermald" }
     - { state: "latest", name: "tlp" }
-    - { state: "latest", name: "linux-generic-hwe-20.04" }
+    - { state: "latest", name: "linux-generic-hwe-22.04" }
