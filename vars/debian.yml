@@ -17,23 +17,23 @@
 _apt_key:
   distribution:
     - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
-      url: "http://download.opensuse.org/repositories/home:/alvistack/Debian_Testing/Release.key"
+      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/Release.key"
       id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
   mainline:
     - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
-      url: "http://download.opensuse.org/repositories/home:/alvistack/Debian_Testing/Release.key"
+      url: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/Release.key"
       id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
 
 _apt_repository:
   distribution:
     - filename: "home:alvistack"
-      repo: "deb http://download.opensuse.org/repositories/home:/alvistack/Debian_Testing/ /"
+      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/ /"
       state: "present"
   mainline:
     - filename: "home:alvistack"
-      repo: "deb http://download.opensuse.org/repositories/home:/alvistack/Debian_Testing/ /"
+      repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/ /"
       state: "present"
 
 _apt:

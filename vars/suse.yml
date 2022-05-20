@@ -16,14 +16,14 @@
 
 _rpm_key:
   distribution:
-    - key: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed/repodata/repomd.xml.key"
+    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed/repodata/repomd.xml.key"
       fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
   mainline:
-    - key: "http://download.opensuse.org/repositories/Kernel:/stable/standard/repodata/repomd.xml.key"
+    - key: "http://downloadcontent.opensuse.org/repositories/Kernel:/stable/standard/repodata/repomd.xml.key"
       fingerprint: "4529410AB52F94C403BAB484ECEEF21003579C1D"
       state: "present"
-    - key: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed/repodata/repomd.xml.key"
+    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed/repodata/repomd.xml.key"
       fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
 
@@ -32,33 +32,33 @@ _yum_repository:
     - file: "home_alvistack"
       name: "home_alvistack"
       description: "home:alvistack (openSUSE_Tumbleweed)"
-      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed"
+      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed"
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed/repodata/repomd.xml.key"
+      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed/repodata/repomd.xml.key"
       state: "present"
   mainline:
     - file: "Kernel_stable"
       name: "Kernel_stable"
       description: "Kernel builds for branch stable (standard)"
-      baseurl: "http://download.opensuse.org/repositories/Kernel:/stable/standard"
+      baseurl: "http://downloadcontent.opensuse.org/repositories/Kernel:/stable/standard"
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://download.opensuse.org/repositories/Kernel:/stable/standard/repodata/repomd.xml.key"
+      gpgkey: "http://downloadcontent.opensuse.org/repositories/Kernel:/stable/standard/repodata/repomd.xml.key"
       state: "present"
     - file: "home_alvistack"
       name: "home_alvistack"
       description: "home:alvistack (openSUSE_Tumbleweed)"
-      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed"
+      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed"
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed/repodata/repomd.xml.key"
+      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Tumbleweed/repodata/repomd.xml.key"
       state: "present"
 
 _zypper:
