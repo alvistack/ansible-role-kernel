@@ -16,7 +16,7 @@
 
 _rpm_key:
   distribution:
-    - key: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
+    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
       fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
   mainline:
@@ -26,7 +26,7 @@ _rpm_key:
     - key: "http://www.elrepo.org/RPM-GPG-KEY-elrepo.org"
       fingerprint: "96C0104F631547311E0BB1AE309BC305BAADAE52"
       state: "present"
-    - key: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
+    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
       fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
 
@@ -45,23 +45,23 @@ _yum_repository:
     - file: "home:alvistack"
       name: "home_alvistack"
       description: "home:alvistack (CentOS_9_Stream)"
-      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream"
+      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream"
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
+      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
       state: "present"
   mainline:
     - file: "home:alvistack"
       name: "home_alvistack"
       description: "home:alvistack (CentOS_9_Stream)"
-      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream"
+      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream"
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
+      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key"
       state: "present"
 
 _yum:

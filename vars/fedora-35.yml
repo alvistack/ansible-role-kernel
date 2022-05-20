@@ -16,14 +16,14 @@
 
 _rpm_key:
   distribution:
-    - key: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_35/repodata/repomd.xml.key"
+    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_35/repodata/repomd.xml.key"
       fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
   mainline:
     - key: "http://repos.fedorapeople.org/repos/thl/RPM-GPG-KEY-knurd-kernel-vanilla"
       fingerprint: "7C71B4C9BF717876635F32054534BEED863625FA"
       state: "present"
-    - key: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_35/repodata/repomd.xml.key"
+    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_35/repodata/repomd.xml.key"
       fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
 
@@ -36,12 +36,12 @@ _yum_repository:
     - file: "home:alvistack"
       name: "home_alvistack"
       description: "home:alvistack (Fedora_35)"
-      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_35"
+      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_35"
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_35/repodata/repomd.xml.key"
+      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_35/repodata/repomd.xml.key"
       state: "present"
   mainline:
     - file: "kernel-vanilla"
@@ -57,12 +57,12 @@ _yum_repository:
     - file: "home:alvistack"
       name: "home_alvistack"
       description: "home:alvistack (Fedora_35)"
-      baseurl: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_35"
+      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_35"
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://download.opensuse.org/repositories/home:/alvistack/Fedora_35/repodata/repomd.xml.key"
+      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_35/repodata/repomd.xml.key"
       state: "present"
 
 _yum:
