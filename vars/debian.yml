@@ -14,6 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_kernel_release: "distribution"
+
 _apt_key:
   distribution:
     - keyring: "/etc/apt/trusted.gpg.d/home_alvistack.gpg"
