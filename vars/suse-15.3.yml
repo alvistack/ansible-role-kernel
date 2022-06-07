@@ -14,6 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_kernel_release: "mainline"
+
 _rpm_key:
   distribution:
     - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.3/repodata/repomd.xml.key"
