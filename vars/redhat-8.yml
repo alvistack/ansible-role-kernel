@@ -36,11 +36,11 @@ _rpm_download:
   distribution: []
   mainline:
     - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm"
-      dest: "/var/cache/ansible/74bb98b514f1571d15d01b63979cc530811431c8d890dd29edaaca95ca475dd8/epel-release-latest-8.noarch.rpm"
-      checksum: "74bb98b514f1571d15d01b63979cc530811431c8d890dd29edaaca95ca475dd8"
+      dest: "/var/cache/ansible/56eb90673f980d70df45d5d52c430fffeaade3534d2d502e80a19f8f2b56581c/epel-release-latest-8.noarch.rpm"
+      checksum: "56eb90673f980d70df45d5d52c430fffeaade3534d2d502e80a19f8f2b56581c"
     - url: "http://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm"
-      dest: "/var/cache/ansible/2672ace16fbe0ede4883c454484ea945ed328659b3b504b69e7dd97331861d9a/elrepo-release-8.el8.elrepo.noarch.rpm"
-      checksum: "2672ace16fbe0ede4883c454484ea945ed328659b3b504b69e7dd97331861d9a"
+      dest: "/var/cache/ansible/239abe6584f4a488f0cde597ff412458adeb0b5c90bce8af17fab5595e13f1a5/elrepo-release-8.el8.elrepo.noarch.rpm"
+      checksum: "239abe6584f4a488f0cde597ff412458adeb0b5c90bce8af17fab5595e13f1a5"
 
 _yum_repository:
   distribution:
