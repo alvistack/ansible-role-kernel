@@ -17,6 +17,7 @@
 galaxy_info:
   standalone: true
   role_name: kernel
+  namespace: alvistack
   author: "Wong Hoi Sing Edison <hswong3i@pantarei-design.com>"
   description: Ansible Role for Kernel Installation
   company: PantaRei Design
