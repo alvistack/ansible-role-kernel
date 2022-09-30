@@ -47,7 +47,7 @@
     - kernel | update-initramfs -c -k all
 
 - name: update /etc/default/grub
-  ini_file:
+  community.general.ini_file:
     path: "/etc/default/grub"
     section: ""
     option: "{{ item.option }}"
