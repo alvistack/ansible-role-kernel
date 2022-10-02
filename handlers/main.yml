@@ -15,21 +15,25 @@
 # limitations under the License.
 
 - name: kernel | update-grub
-  ansible.builtin.command: update-grub
+  ansible.builtin.command:
+    cmd: update-grub
   changed_when: false
   failed_when: false
 
 - name: kernel | update-initramfs -c -k all
-  ansible.builtin.command: update-initramfs -c -k all
+  ansible.builtin.command:
+    cmd: update-initramfs -c -k all
   changed_when: false
   failed_when: false
 
 - name: kernel | grub2-mkconfig -o /boot/grub2/grub.cfg
-  ansible.builtin.command: grub2-mkconfig -o /boot/grub2/grub.cfg
+  ansible.builtin.command:
+    cmd: grub2-mkconfig -o /boot/grub2/grub.cfg
   changed_when: false
   failed_when: false
 
 - name: kernel | dracut -f
-  ansible.builtin.command: dracut -f
+  ansible.builtin.command:
+    cmd: dracut -f
   changed_when: false
   failed_when: false
