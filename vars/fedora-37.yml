@@ -22,8 +22,8 @@ _rpm_key:
       fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
       state: "present"
   mainline:
-    - key: "http://repos.fedorapeople.org/repos/thl/RPM-GPG-KEY-knurd-kernel-vanilla"
-      fingerprint: "7C71B4C9BF717876635F32054534BEED863625FA"
+    - key: "https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/stable/pubkey.gpg"
+      fingerprint: "226F8B8999A3725B7D92E357C2C2DDA156206570"
       state: "present"
     - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_37/repodata/repomd.xml.key"
       fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
@@ -46,15 +46,15 @@ _yum_repository:
       gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_37/repodata/repomd.xml.key"
       state: "present"
   mainline:
-    - file: "kernel-vanilla"
-      name: "kernel-vanilla-stable"
-      description: "Linux vanilla kernels from stable series"
-      baseurl: "http://repos.fedorapeople.org/repos/thl/kernel-vanilla-stable/fedora-37/x86_64"
-      enabled: false
+    - file: "group_kernel-vanilla-stable-fedora-37"
+      name: "Copr repo for stable owned by @kernel-vanilla"
+      description: "Copr repo for stable owned by @kernel-vanilla"
+      baseurl: "https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/stable/fedora-37-x86_64"
+      enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://repos.fedorapeople.org/repos/thl/RPM-GPG-KEY-knurd-kernel-vanilla"
+      gpgkey: "https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/stable/pubkey.gpg"
       state: "present"
     - file: "home:alvistack"
       name: "home_alvistack"
