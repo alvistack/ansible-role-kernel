@@ -67,8 +67,8 @@ _zypper:
   distribution:
     - { state: "latest", name: "tlp" }
     - { state: "latest", name: "kernel-default" }
-    - { state: "latest", name: "kernel-source" }
+    - { state: "latest", name: "kernel-default-devel" }
   mainline:
     - { state: "latest", name: "tlp" }
     - { state: "latest", name: "kernel-default" }
-    - { state: "latest", name: "kernel-source" }
+    - { state: "latest", name: "kernel-default-devel" }
