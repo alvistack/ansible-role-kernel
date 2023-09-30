@@ -36,8 +36,8 @@ _rpm_download:
   distribution: []
   mainline:
     - url: "http://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm"
-      dest: "/var/cache/ansible/665be873642acd849e44b000da1b1f1b811382510e5993ea24e5be6cc9c1828f/epel-release-latest-9.noarch.rpm"
-      checksum: "665be873642acd849e44b000da1b1f1b811382510e5993ea24e5be6cc9c1828f"
+      dest: "/var/cache/ansible/a569c096647c70e3748792823356f2e2e1c6c626e6bda60d94e80ea0da210d1a/epel-release-latest-9.noarch.rpm"
+      checksum: "a569c096647c70e3748792823356f2e2e1c6c626e6bda60d94e80ea0da210d1a"
     - url: "http://www.elrepo.org/elrepo-release-9.el9.elrepo.noarch.rpm"
       dest: "/var/cache/ansible/3b5b55602df21e46cb1a4481253945d839651a3f1637887dbd85a0cf05c334da/elrepo-release-9.el9.elrepo.noarch.rpm"
       checksum: "3b5b55602df21e46cb1a4481253945d839651a3f1637887dbd85a0cf05c334da"
