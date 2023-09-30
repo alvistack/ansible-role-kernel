@@ -39,14 +39,14 @@ _apt_key:
 _apt_repository:
   distribution:
     - filename: "cappelikan"
-      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu lunar main"
+      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu mantic main"
       state: "present"
     - filename: "home:alvistack"
       repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.04/ /"
       state: "present"
   mainline:
     - filename: "cappelikan"
-      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu lunar main"
+      repo: "deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu mantic main"
       state: "present"
     - filename: "home:alvistack"
       repo: "deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/xUbuntu_23.04/ /"
