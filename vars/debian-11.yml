@@ -43,8 +43,10 @@ _apt_repository:
 
 _apt:
   distribution:
+    - { state: "latest", name: "dkms" }
     - { state: "latest", name: "tlp" }
     - { state: "latest", name: "linux-image-amd64" }
   mainline:
+    - { state: "latest", name: "dkms" }
     - { state: "latest", name: "tlp" }
     - { state: "latest", name: "linux-image-amd64" }
