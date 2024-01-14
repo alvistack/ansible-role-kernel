@@ -68,10 +68,12 @@ _yum_repository:
 
 _yum:
   distribution:
+    - { state: "latest", name: "dkms" }
     - { state: "latest", name: "tlp" }
     - { state: "latest", name: "kernel" }
     - { state: "latest", name: "kernel-devel" }
   mainline:
+    - { state: "latest", name: "dkms" }
     - { state: "latest", name: "tlp" }
     - { state: "latest", name: "kernel-ml", enablerepo: "elrepo-kernel" }
     - { state: "latest", name: "kernel-ml-devel", enablerepo: "elrepo-kernel" }

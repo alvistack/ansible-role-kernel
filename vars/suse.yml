@@ -65,10 +65,12 @@ _yum_repository:
 
 _zypper:
   distribution:
+    - { state: "latest", name: "dkms" }
     - { state: "latest", name: "tlp" }
     - { state: "latest", name: "kernel-default" }
     - { state: "latest", name: "kernel-default-devel" }
   mainline:
+    - { state: "latest", name: "dkms" }
     - { state: "latest", name: "tlp" }
     - { state: "latest", name: "kernel-default" }
     - { state: "latest", name: "kernel-default-devel" }

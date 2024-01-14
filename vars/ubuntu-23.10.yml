@@ -55,6 +55,7 @@ _apt_repository:
 _apt:
   distribution:
     - { state: "latest", name: "amd64-microcode" }
+    - { state: "latest", name: "dkms" }
     - { state: "latest", name: "intel-microcode" }
     - { state: "latest", name: "linux-firmware" }
     - { state: "latest", name: "mainline" }
@@ -64,6 +65,7 @@ _apt:
     - { state: "latest", name: "linux-generic" }
   mainline:
     - { state: "latest", name: "amd64-microcode" }
+    - { state: "latest", name: "dkms" }
     - { state: "latest", name: "intel-microcode" }
     - { state: "latest", name: "linux-firmware" }
     - { state: "latest", name: "mainline" }
