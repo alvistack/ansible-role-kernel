@@ -14,50 +14,50 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_kernel_release: "mainline"
+_kernel_release: mainline
 
 _rpm_key:
   distribution:
-    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5/repodata/repomd.xml.key"
-      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
-      state: "present"
+    - key: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5/repodata/repomd.xml.key
+      fingerprint: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
+      state: present
   mainline:
-    - key: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5/repodata/repomd.xml.key"
-      fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
-      state: "present"
+    - key: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5/repodata/repomd.xml.key
+      fingerprint: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
+      state: present
 
 _yum_repository:
   distribution:
-    - file: "home_alvistack"
-      name: "home_alvistack"
-      description: "home:alvistack (openSUSE_Leap_15.5)"
-      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5"
+    - file: home_alvistack
+      name: home_alvistack
+      description: home:alvistack (openSUSE_Leap_15.5)
+      baseurl: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5/repodata/repomd.xml.key"
-      state: "present"
+      gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5/repodata/repomd.xml.key
+      state: present
   mainline:
-    - file: "home_alvistack"
-      name: "home_alvistack"
-      description: "home:alvistack (openSUSE_Leap_15.5)"
-      baseurl: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5"
+    - file: home_alvistack
+      name: home_alvistack
+      description: home:alvistack (openSUSE_Leap_15.5)
+      baseurl: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: "http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5/repodata/repomd.xml.key"
-      state: "present"
+      gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.5/repodata/repomd.xml.key
+      state: present
 
 _zypper:
   distribution:
-    - { state: "latest", name: "dkms" }
-    - { state: "latest", name: "tlp" }
-    - { state: "latest", name: "kernel-default" }
-    - { state: "latest", name: "kernel-default-devel" }
+    - { state: latest, name: dkms }
+    - { state: latest, name: tlp }
+    - { state: latest, name: kernel-default }
+    - { state: latest, name: kernel-default-devel }
   mainline:
-    - { state: "latest", name: "dkms" }
-    - { state: "latest", name: "tlp" }
-    - { state: "latest", name: "kernel-default" }
-    - { state: "latest", name: "kernel-default-devel" }
+    - { state: latest, name: dkms }
+    - { state: latest, name: tlp }
+    - { state: latest, name: kernel-default }
+    - { state: latest, name: kernel-default-devel }
