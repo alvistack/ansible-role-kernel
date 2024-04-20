@@ -72,4 +72,4 @@ _apt:
     - { state: latest, name: policykit-1 }
     - { state: latest, name: thermald }
     - { state: latest, name: tlp }
-    - { state: latest, name: linux-generic }
+    - { state: latest, name: linux-generic-hwe-24.04 }
