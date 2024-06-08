@@ -17,33 +17,14 @@
 _kernel_release: mainline
 
 _rpm_key:
-  distribution:
-    - key: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_40/repodata/repomd.xml.key
-      fingerprint: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
-      state: present
+  distribution: []
   mainline:
     - key: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/stable/pubkey.gpg
       fingerprint: 226F8B8999A3725B7D92E357C2C2DDA156206570
       state: present
-    - key: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_40/repodata/repomd.xml.key
-      fingerprint: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
-      state: present
 
-_rpm_download:
-  distribution: []
-  mainline: []
 _yum_repository:
-  distribution:
-    - file: home:alvistack
-      name: home_alvistack
-      description: home:alvistack (Fedora_40)
-      baseurl: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_40
-      enabled: true
-      priority: "2"
-      module_hotfixes: true
-      gpgcheck: true
-      gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_40/repodata/repomd.xml.key
-      state: present
+  distribution: []
   mainline:
     - file: group_kernel-vanilla-stable-fedora-38
       name: Copr repo for stable owned by @kernel-vanilla
@@ -55,25 +36,13 @@ _yum_repository:
       gpgcheck: true
       gpgkey: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/stable/pubkey.gpg
       state: present
-    - file: home:alvistack
-      name: home_alvistack
-      description: home:alvistack (Fedora_40)
-      baseurl: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_40
-      enabled: true
-      priority: "2"
-      module_hotfixes: true
-      gpgcheck: true
-      gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Fedora_40/repodata/repomd.xml.key
-      state: present
 
 _yum:
   distribution:
     - { state: latest, name: dkms }
-    - { state: latest, name: tlp }
     - { state: latest, name: kernel }
     - { state: latest, name: kernel-devel }
   mainline:
     - { state: latest, name: dkms }
-    - { state: latest, name: tlp }
     - { state: latest, name: kernel, enablerepo: kernel-vanilla-stable }
     - { state: latest, name: kernel-devel, enablerepo: kernel-vanilla-stable }

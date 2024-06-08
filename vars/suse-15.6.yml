@@ -17,47 +17,19 @@
 _kernel_release: mainline
 
 _rpm_key:
-  distribution:
-    - key: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.6/repodata/repomd.xml.key
-      fingerprint: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
-      state: present
-  mainline:
-    - key: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.6/repodata/repomd.xml.key
-      fingerprint: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
-      state: present
+  distribution: []
+  mainline: []
 
 _yum_repository:
-  distribution:
-    - file: home_alvistack
-      name: home_alvistack
-      description: home:alvistack (openSUSE_Leap_15.6)
-      baseurl: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.6
-      enabled: true
-      priority: "2"
-      module_hotfixes: true
-      gpgcheck: true
-      gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.6/repodata/repomd.xml.key
-      state: present
-  mainline:
-    - file: home_alvistack
-      name: home_alvistack
-      description: home:alvistack (openSUSE_Leap_15.6)
-      baseurl: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.6
-      enabled: true
-      priority: "2"
-      module_hotfixes: true
-      gpgcheck: true
-      gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_15.6/repodata/repomd.xml.key
-      state: present
+  distribution: []
+  mainline: []
 
 _zypper:
   distribution:
     - { state: latest, name: dkms }
-    - { state: latest, name: tlp }
     - { state: latest, name: kernel-default }
     - { state: latest, name: kernel-default-devel }
   mainline:
     - { state: latest, name: dkms }
-    - { state: latest, name: tlp }
     - { state: latest, name: kernel-default }
     - { state: latest, name: kernel-default-devel }

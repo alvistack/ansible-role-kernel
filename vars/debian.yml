@@ -17,33 +17,17 @@
 _kernel_release: distribution
 
 _apt_key:
-  distribution:
-    - keyring: /etc/apt/trusted.gpg.d/home_alvistack.gpg
-      url: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/Release.key
-      id: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
-      state: present
-  mainline:
-    - keyring: /etc/apt/trusted.gpg.d/home_alvistack.gpg
-      url: http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/Release.key
-      id: 789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD
-      state: present
+  distribution: []
+  mainline: []
 
 _apt_repository:
-  distribution:
-    - filename: home:alvistack
-      repo: deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/ /
-      state: present
-  mainline:
-    - filename: home:alvistack
-      repo: deb http://downloadcontent.opensuse.org/repositories/home:/alvistack/Debian_Testing/ /
-      state: present
+  distribution: []
+  mainline: []
 
 _apt:
   distribution:
     - { state: latest, name: dkms }
-    - { state: latest, name: tlp }
     - { state: latest, name: linux-image-amd64 }
   mainline:
     - { state: latest, name: dkms }
-    - { state: latest, name: tlp }
     - { state: latest, name: linux-image-amd64 }
