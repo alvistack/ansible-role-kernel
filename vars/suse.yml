@@ -17,7 +17,7 @@
 _kernel_release: distribution
 
 _rpm_key:
-  distribution:
+  distribution: []
   mainline:
     - key: http://downloadcontent.opensuse.org/repositories/Kernel:/stable/standard/repodata/repomd.xml.key
       fingerprint: 4529410AB52F94C403BAB484ECEEF21003579C1D
