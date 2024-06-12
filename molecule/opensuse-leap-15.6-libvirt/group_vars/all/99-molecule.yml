@@ -13,24 +13,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-_kernel_release: mainline
-
-_apt_key:
-  distribution: []
-  mainline: []
-
-_apt_repository:
-  distribution: []
-  mainline:
-    - filename: bullseye-backports
-      repo: deb http://deb.debian.org/debian bullseye-backports main
-      state: present
-
-_apt:
-  distribution:
-    - { state: latest, name: dkms }
-    - { state: latest, name: linux-image-amd64 }
-  mainline:
-    - { state: latest, name: dkms }
-    - { state: latest, name: linux-image-amd64 }
