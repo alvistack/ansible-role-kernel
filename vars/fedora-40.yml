@@ -26,10 +26,10 @@ _rpm_key:
 _yum_repository:
   distribution: []
   mainline:
-    - file: group_kernel-vanilla-stable-fedora-40
-      name: Copr repo for stable owned by @kernel-vanilla
+    - file: _copr:copr.fedorainfracloud.org:group_kernel-vanilla:stable
+      name: copr:copr.fedorainfracloud.org:group_kernel-vanilla:stable
       description: Copr repo for stable owned by @kernel-vanilla
-      baseurl: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/stable/fedora-40-x86_64
+      baseurl: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/stable/fedora-$releasever-$basearch
       enabled: true
       priority: "2"
       module_hotfixes: true
