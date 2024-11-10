@@ -22,6 +22,9 @@ _rpm_key:
     - key: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/stable/pubkey.gpg
       fingerprint: 226F8B8999A3725B7D92E357C2C2DDA156206570
       state: present
+    - key: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/fedora/pubkey.gpg
+      fingerprint: D359CEACF4B5BA1B81FE6F29DFF33528979EF4C7
+      state: present
 
 _yum_repository:
   distribution: []
@@ -44,7 +47,7 @@ _yum_repository:
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/stable/pubkey.gpg
+      gpgkey: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/fedora/pubkey.gpg
       state: present
 
 _yum:
