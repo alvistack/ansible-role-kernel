@@ -54,5 +54,5 @@ _yum:
     - { state: latest, name: kernel-devel }
   mainline:
     - { state: latest, name: dkms }
-    - { state: latest, name: kernel, enablerepo: kernel-vanilla-stable }
-    - { state: latest, name: kernel-devel, enablerepo: kernel-vanilla-stable }
+    - { state: latest, name: kernel, enablerepo: copr:copr.fedorainfracloud.org:group_kernel-vanilla:stable }
+    - { state: latest, name: kernel-devel, enablerepo: copr:copr.fedorainfracloud.org:group_kernel-vanilla:stable }
