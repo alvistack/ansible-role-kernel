@@ -16,26 +16,26 @@
 
 _kernel_release: mainline
 
-_apt_key:
+_deb822_repository:
   distribution:
-    - keyring: /etc/apt/trusted.gpg.d/cappelikan.gpg
-      url: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D
-      id: 3AE27527713D2479DCAFFD58A89D7C1B2F76304D
+    - state:
+      name: cappelikan
+      types: deb
+      uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu 
+      suites: focal
+      components: main
+      signed_by: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D
+      enabled: true
       state: present
   mainline:
-    - keyring: /etc/apt/trusted.gpg.d/cappelikan.gpg
-      url: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D
-      id: 3AE27527713D2479DCAFFD58A89D7C1B2F76304D
-      state: present
-
-_apt_repository:
-  distribution:
-    - filename: cappelikan
-      repo: deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu focal main
-      state: present
-  mainline:
-    - filename: cappelikan
-      repo: deb http://ppa.launchpad.net/cappelikan/ppa/ubuntu focal main
+    - state:
+      name: cappelikan
+      types: deb
+      uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu 
+      suites: focal
+      components: main
+      signed_by: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D
+      enabled: true
       state: present
 
 _apt:
