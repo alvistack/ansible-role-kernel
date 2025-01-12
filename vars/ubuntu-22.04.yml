@@ -18,8 +18,7 @@ _kernel_release: mainline
 
 _deb822_repository:
   distribution:
-    - state:
-      name: cappelikan
+    - name: cappelikan
       types: deb
       uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu
       suites: jammy
@@ -28,8 +27,7 @@ _deb822_repository:
       enabled: true
       state: present
   mainline:
-    - state:
-      name: cappelikan
+    - name: cappelikan
       types: deb
       uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu
       suites: jammy

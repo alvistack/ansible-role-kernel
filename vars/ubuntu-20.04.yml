@@ -18,20 +18,18 @@ _kernel_release: mainline
 
 _deb822_repository:
   distribution:
-    - state:
-      name: cappelikan
+    - name: cappelikan
       types: deb
-      uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu 
+      uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu
       suites: focal
       components: main
       signed_by: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D
       enabled: true
       state: present
   mainline:
-    - state:
-      name: cappelikan
+    - name: cappelikan
       types: deb
-      uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu 
+      uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu
       suites: focal
       components: main
       signed_by: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D
