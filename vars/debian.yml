@@ -16,6 +16,10 @@
 
 _kernel_release: distribution
 
+_apt_key:
+  distribution: []
+  mainline: []
+
 _deb822_repository:
   distribution: []
   mainline: []
