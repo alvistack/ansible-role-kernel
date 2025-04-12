@@ -1,0 +1,67 @@
+---
+
+# Copyright 2025 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+_kernel_release: mainline
+
+_apt_key:
+  distribution:
+    - url: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D
+      dest: /etc/apt/keyrings/cappelikan.asc
+      checksum: "sha256:59ebd809e3089a591e0893c1c917f6412333703babb35a2ceb50dca11f736295"
+  mainline:
+    - url: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D
+      dest: /etc/apt/keyrings/cappelikan.asc
+      checksum: "sha256:59ebd809e3089a591e0893c1c917f6412333703babb35a2ceb50dca11f736295"
+
+_deb822_repository:
+  distribution:
+    - name: cappelikan
+      types: deb
+      uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu
+      suites: plucky
+      components: main
+      signed_by: /etc/apt/keyrings/cappelikan.asc
+      enabled: true
+      state: present
+  mainline:
+    - name: cappelikan
+      types: deb
+      uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu
+      suites: plucky
+      components: main
+      signed_by: /etc/apt/keyrings/cappelikan.asc
+      enabled: true
+      state: present
+
+_apt:
+  distribution:
+    - { state: latest, name: amd64-microcode }
+    - { state: latest, name: dkms }
+    - { state: latest, name: intel-microcode }
+    - { state: latest, name: linux-firmware }
+    - { state: latest, name: mainline }
+    - { state: latest, name: policykit-1 }
+    - { state: latest, name: thermald }
+    - { state: latest, name: linux-generic }
+  mainline:
+    - { state: latest, name: amd64-microcode }
+    - { state: latest, name: dkms }
+    - { state: latest, name: intel-microcode }
+    - { state: latest, name: linux-firmware }
+    - { state: latest, name: mainline }
+    - { state: latest, name: policykit-1 }
+    - { state: latest, name: thermald }
+    - { state: latest, name: linux-generic-hwe-24.04 }
