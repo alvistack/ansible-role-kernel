@@ -53,7 +53,7 @@ _apt:
     - { state: latest, name: intel-microcode }
     - { state: latest, name: linux-firmware }
     - { state: latest, name: mainline }
-    - { state: latest, name: policykit-1 }
+    - { state: latest, name: polkitd }
     - { state: latest, name: thermald }
     - { state: latest, name: linux-generic }
   mainline:
@@ -62,6 +62,6 @@ _apt:
     - { state: latest, name: intel-microcode }
     - { state: latest, name: linux-firmware }
     - { state: latest, name: mainline }
-    - { state: latest, name: policykit-1 }
+    - { state: latest, name: polkitd }
     - { state: latest, name: thermald }
     - { state: latest, name: linux-generic-hwe-24.04 }
