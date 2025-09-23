@@ -31,7 +31,7 @@ _deb822_repository:
     - name: cappelikan
       types: deb
       uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu
-      suites: questing
+      suites: plucky
       components: main
       signed_by: /etc/apt/keyrings/cappelikan.asc
       enabled: true
@@ -40,7 +40,7 @@ _deb822_repository:
     - name: cappelikan
       types: deb
       uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu
-      suites: questing
+      suites: plucky
       components: main
       signed_by: /etc/apt/keyrings/cappelikan.asc
       enabled: true
