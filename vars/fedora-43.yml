@@ -1,0 +1,61 @@
+---
+
+# Copyright 2026 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+_kernel_release: mainline
+
+_rpm_key:
+  distribution: []
+  mainline:
+    - key: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/stable/pubkey.gpg
+      fingerprint: 226F8B8999A3725B7D92E357C2C2DDA156206570
+      state: present
+    - key: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/fedora/pubkey.gpg
+      fingerprint: D359CEACF4B5BA1B81FE6F29DFF33528979EF4C7
+      state: present
+
+_yum_repository:
+  distribution: []
+  mainline:
+    - file: _copr:copr.fedorainfracloud.org:group_kernel-vanilla:stable
+      name: copr:copr.fedorainfracloud.org:group_kernel-vanilla:stable
+      description: Copr repo for stable owned by @kernel-vanilla
+      baseurl: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/stable/fedora-$releasever-$basearch
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/stable/pubkey.gpg
+      state: present
+    - file: _copr:copr.fedorainfracloud.org:group_kernel-vanilla:stable
+      name: coprdep:copr.fedorainfracloud.org:group_kernel-vanilla:fedora
+      description: "Copr copr.fedorainfracloud.org/@kernel-vanilla/stable runtime dependency #1 - @kernel-vanilla/fedora"
+      baseurl: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/fedora/fedora-$releasever-$basearch
+      enabled: true
+      priority: "2"
+      module_hotfixes: true
+      gpgcheck: true
+      gpgkey: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/fedora/pubkey.gpg
+      state: present
+
+_yum:
+  distribution:
+    - { state: latest, name: dkms }
+    - { state: latest, name: kernel }
+    - { state: latest, name: kernel-devel }
+  mainline:
+    - { state: latest, name: dkms }
+    - { state: latest, name: kernel, enablerepo: copr:copr.fedorainfracloud.org:group_kernel-vanilla:stable }
+    - { state: latest, name: kernel-devel, enablerepo: copr:copr.fedorainfracloud.org:group_kernel-vanilla:stable }
