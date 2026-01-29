@@ -19,7 +19,7 @@ _kernel_release: distribution
 _rpm_key:
   distribution: []
   mainline:
-    - key: https://downloadcontent.opensuse.org/repositories/Kernel:/stable/standard/repodata/repomd.xml.key
+    - key: https://download.opensuse.org/repositories/Kernel:/stable/standard/repodata/repomd.xml.key
       fingerprint: 4529410AB52F94C403BAB484ECEEF21003579C1D
       state: present
 
@@ -29,12 +29,12 @@ _yum_repository:
     - file: Kernel_stable
       name: Kernel_stable
       description: Kernel builds for branch stable (standard)
-      baseurl: https://downloadcontent.opensuse.org/repositories/Kernel:/stable/standard
+      baseurl: https://download.opensuse.org/repositories/Kernel:/stable/standard
       enabled: true
       priority: "2"
       module_hotfixes: true
       gpgcheck: true
-      gpgkey: https://downloadcontent.opensuse.org/repositories/Kernel:/stable/standard/repodata/repomd.xml.key
+      gpgkey: https://download.opensuse.org/repositories/Kernel:/stable/standard/repodata/repomd.xml.key
       state: present
 
 _zypper:
