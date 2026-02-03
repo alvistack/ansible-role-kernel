@@ -14,28 +14,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_kernel_release: distribution
+_kernel_release: mainline
 
 _rpm_key:
   distribution: []
-  mainline:
-    - key: https://download.opensuse.org/repositories/Kernel:/stable/standard/repodata/repomd.xml.key
-      fingerprint: 4529410AB52F94C403BAB484ECEEF21003579C1D
-      state: present
+  mainline: []
 
 _yum_repository:
   distribution: []
-  mainline:
-    - file: Kernel_stable
-      name: Kernel_stable
-      description: Kernel builds for branch stable (standard)
-      baseurl: https://download.opensuse.org/repositories/Kernel:/stable/standard
-      enabled: true
-      priority: "2"
-      module_hotfixes: true
-      gpgcheck: true
-      gpgkey: https://download.opensuse.org/repositories/Kernel:/stable/standard/repodata/repomd.xml.key
-      state: present
+  mainline: []
 
 _zypper:
   distribution:
