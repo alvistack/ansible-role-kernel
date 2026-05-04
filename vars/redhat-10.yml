@@ -63,7 +63,7 @@ _yum_repository:
       gpgkey: http://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
       state: present
 
-_yum:
+_dnf:
   distribution:
     - { state: latest, name: dkms }
     - { state: latest, name: kernel }

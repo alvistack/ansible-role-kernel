@@ -50,7 +50,7 @@ _yum_repository:
       gpgkey: https://download.copr.fedorainfracloud.org/results/@kernel-vanilla/fedora/pubkey.gpg
       state: present
 
-_yum:
+_dnf:
   distribution:
     - { state: latest, name: dkms }
     - { state: latest, name: kernel }

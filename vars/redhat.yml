@@ -24,7 +24,7 @@ _yum_repository:
   distribution: []
   mainline: []
 
-_yum:
+_dnf:
   distribution:
     - { state: latest, name: dkms }
     - { state: latest, name: kernel }

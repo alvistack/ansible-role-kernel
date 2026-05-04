@@ -36,12 +36,12 @@
     state: "{{ item.state }}"
   loop: "{{ _yum_repository[kernel_release] }}"
 
-- name: dnf install
-  ansible.builtin.dnf:
+- name: yum install
+  ansible.builtin.yum: # noqa fqcn[action-core]
     name: "{{ item.name }}"
     state: "{{ item.state }}"
     enablerepo: "{{ item.enablerepo | default(None) or omit }}"
-  loop: "{{ _dnf[kernel_release] }}"
+  loop: "{{ _yum[kernel_release] }}"
   register: result
   until: result is succeeded
   notify:
