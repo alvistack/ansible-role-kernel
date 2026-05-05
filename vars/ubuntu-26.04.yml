@@ -64,4 +64,4 @@ _apt:
     - { state: latest, name: mainline }
     - { state: latest, name: polkitd }
     - { state: latest, name: thermald }
-    - { state: latest, name: linux-generic-hwe-24.04 }
+    - { state: latest, name: linux-generic-hwe-26.04 }
