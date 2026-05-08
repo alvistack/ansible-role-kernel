@@ -16,15 +16,18 @@
 
 _kernel_release: distribution
 
-_apt_key:
+_apt_key: "{{ __apt_key[kernel_release] }}"
+__apt_key:
   distribution: []
   mainline: []
 
-_deb822_repository:
+_deb822_repository: "{{ __deb822_repository[kernel_release] }}"
+__deb822_repository:
   distribution: []
   mainline: []
 
-_apt:
+_apt: "{{ __apt[kernel_release] }}"
+__apt:
   distribution:
     - { state: latest, name: dkms }
     - { state: latest, name: linux-image-amd64 }
