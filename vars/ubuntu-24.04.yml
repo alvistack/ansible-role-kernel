@@ -16,7 +16,8 @@
 
 _kernel_release: mainline
 
-_apt_key:
+_apt_key: "{{ __apt_key[kernel_release] }}"
+__apt_key:
   distribution:
     - url: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D
       dest: /etc/apt/keyrings/cappelikan.asc
@@ -26,7 +27,8 @@ _apt_key:
       dest: /etc/apt/keyrings/cappelikan.asc
       checksum: "sha256:59ebd809e3089a591e0893c1c917f6412333703babb35a2ceb50dca11f736295"
 
-_deb822_repository:
+_deb822_repository: "{{ __deb822_repository[kernel_release] }}"
+__deb822_repository:
   distribution:
     - name: cappelikan
       types: deb
@@ -46,7 +48,8 @@ _deb822_repository:
       enabled: true
       state: present
 
-_apt:
+_apt: "{{ __apt[kernel_release] }}"
+__apt:
   distribution:
     - { state: latest, name: amd64-microcode }
     - { state: latest, name: dkms }

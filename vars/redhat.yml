@@ -16,15 +16,18 @@
 
 _kernel_release: distribution
 
-_rpm_key:
+_rpm_key: "{{ __rpm_key[kernel_release] }}"
+__rpm_key:
   distribution: []
   mainline: []
 
-_yum_repository:
+_yum_repository: "{{ __yum_repository[kernel_release] }}"
+__yum_repository:
   distribution: []
   mainline: []
 
-_yum:
+_dnf: "{{ __dnf[kernel_release] }}"
+__dnf:
   distribution:
     - { state: latest, name: dkms }
     - { state: latest, name: kernel }
