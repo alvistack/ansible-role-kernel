@@ -33,7 +33,7 @@ __deb822_repository:
     - name: cappelikan
       types: deb
       uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu
-      suites: plucky
+      suites: stonking
       components: main
       signed_by: /etc/apt/keyrings/cappelikan.asc
       enabled: true
@@ -42,7 +42,7 @@ __deb822_repository:
     - name: cappelikan
       types: deb
       uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu
-      suites: plucky
+      suites: stonking
       components: main
       signed_by: /etc/apt/keyrings/cappelikan.asc
       enabled: true
@@ -67,4 +67,4 @@ __apt:
     - { state: latest, name: mainline }
     - { state: latest, name: polkitd }
     - { state: latest, name: thermald }
-    - { state: latest, name: linux-generic-hwe-26.10 }
+    - { state: latest, name: linux-generic-hwe-26.04 }
