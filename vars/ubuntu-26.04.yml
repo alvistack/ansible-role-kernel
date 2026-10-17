@@ -21,11 +21,11 @@ __apt_key:
   distribution:
     - url: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D
       dest: /etc/apt/keyrings/cappelikan.asc
-      checksum: "sha256:59ebd809e3089a591e0893c1c917f6412333703babb35a2ceb50dca11f736295"
+      checksum: "sha256:4ca80198338d8ab4d774e3cbfdeae0e7af26b98a5355286d6784fd32511dbe55"
   mainline:
     - url: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3AE27527713D2479DCAFFD58A89D7C1B2F76304D
       dest: /etc/apt/keyrings/cappelikan.asc
-      checksum: "sha256:59ebd809e3089a591e0893c1c917f6412333703babb35a2ceb50dca11f736295"
+      checksum: "sha256:4ca80198338d8ab4d774e3cbfdeae0e7af26b98a5355286d6784fd32511dbe55"
 
 _deb822_repository: "{{ __deb822_repository[kernel_release] }}"
 __deb822_repository:
@@ -33,7 +33,7 @@ __deb822_repository:
     - name: cappelikan
       types: deb
       uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu
-      suites: plucky
+      suites: resolute
       components: main
       signed_by: /etc/apt/keyrings/cappelikan.asc
       enabled: true
@@ -42,7 +42,7 @@ __deb822_repository:
     - name: cappelikan
       types: deb
       uris: http://ppa.launchpad.net/cappelikan/ppa/ubuntu
-      suites: plucky
+      suites: resolute
       components: main
       signed_by: /etc/apt/keyrings/cappelikan.asc
       enabled: true
